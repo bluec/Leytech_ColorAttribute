@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Leytech ColorAttribute Extension
+ *
+ * @category    Leytech
+ * @package     Leytech_ColorAttribute
+ * @author      Chris Nolan <chris@leytech.co.uk>
+ */
+-->
+<config>
+    <modules>
+        <Leytech_ColorAttribute>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Leytech_ColorAttribute>
+    </modules>
+</config>

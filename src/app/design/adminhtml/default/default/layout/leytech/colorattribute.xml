@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Leytech ColorAttribute Extension
+ *
+ * @category    Leytech
+ * @package     Leytech_ColorAttribute
+ * @author      Chris Nolan <chris@leytech.co.uk>
+ */
+-->
+<layout version="0.1.0">
+    <adminhtml_catalog_product_edit>
+        <reference name="head">
+            <action method="addItem">
+                <type>js</type>
+                <name>leytech/colorattribute/jscolor/jscolor.min.js</name>
+            </action>
+        </reference>
+    </adminhtml_catalog_product_edit>
+</layout>

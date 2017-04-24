@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Leytech ColorAttribute Extension
+ *
+ * @category    Leytech
+ * @package     Leytech_ColorAttribute
+ * @author      Chris Nolan <chris@leytech.co.uk>
+ */
+-->
+<config>
+    <modules>
+        <Leytech_ColorAttribute>
+            <version>1.0.0</version>
+        </Leytech_ColorAttribute>
+    </modules>
+    <global>
+        <blocks>
+            <leytech_colorattribute>
+                <class>Leytech_ColorAttribute_Block</class>
+            </leytech_colorattribute>
+        </blocks>
+        <models>
+            <leytech_colorattribute>
+                <class>Leytech_ColorAttribute_Model</class>
+            </leytech_colorattribute>
+        </models>
+        <helpers>
+            <leytech_colorattribute>
+                <class>Leytech_ColorAttribute_Helper</class>
+            </leytech_colorattribute>
+        </helpers>
+        <events>
+            <catalog_entity_attribute_save_before>
+                <observers>
+                    <leytech_colorattribute>
+                        <type>model</type>
+                        <class>leytech_colorattribute/observer</class>
+                        <method>assignBackendModelToAttribute</method>
+                    </leytech_colorattribute>
+                </observers>
+            </catalog_entity_attribute_save_before>
+        </events>
+    </global>
+    <adminhtml>
+        <events>
+            <adminhtml_product_attribute_types>
+                <observers>
+                    <leytech_colorattribute>
+                        <type>model</type>
+                        <class>leytech_colorattribute/observer</class>
+                        <method>addColorAttributeType</method>
+                    </leytech_colorattribute>
+                </observers>
+            </adminhtml_product_attribute_types>
+            <adminhtml_catalog_product_edit_element_types>
+                <observers>
+                    <leytech_colorattribute>
+                        <class>leytech_colorattribute/observer</class>
+                        <method>updateElementTypes</method>
+                    </leytech_colorattribute>
+                </observers>
+            </adminhtml_catalog_product_edit_element_types>
+        </events>
+        <layout>
+            <updates>
+                <leytech_colorattribute>
+                    <file>leytech/colorattribute.xml</file>
+                </leytech_colorattribute>
+            </updates>
+        </layout>
+    </adminhtml>
+    <default>
+        <general>
+            <validator_data>
+                <input_types>
+                    <leytech_color>leytech_color</leytech_color>
+                </input_types>
+            </validator_data>
+        </general>
+    </default>
+</config>
