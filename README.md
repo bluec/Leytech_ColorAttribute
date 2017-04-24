@@ -19,6 +19,16 @@ Tested on Magento CE 1.9.3.2. Should work on lower versions and equivalent EE.
 3. Assign the new attribute to an attribute set.
 4. You should be able to see the new color picker attribute when you edit a product.
 
+### Screenshots
+
+Adding a new color picker product attribute:
+
+![Adding a new color picker product attribute](https://cloud.githubusercontent.com/assets/1577895/25341206/07f53322-2900-11e7-9143-fd6e3ef6c734.png "Adding a new color picker product attribute")
+
+Using the color picker when editing a product:
+
+![Using the color picker when editing a product](https://cloud.githubusercontent.com/assets/1577895/25341207/07f7df50-2900-11e7-9db0-0973a5579d17.png "Using the color picker when editing a product")
+
 ### To do
 
 1. Create an option to use HTML5 color input type instead of using jscolor library.
