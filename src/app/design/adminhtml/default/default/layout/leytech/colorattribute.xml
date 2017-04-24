@@ -11,9 +11,29 @@
 <layout version="0.1.0">
     <adminhtml_catalog_product_edit>
         <reference name="head">
-            <action method="addItem">
+            <action method="addItem" ifconfig="leytech_colorattribute/settings/enabled">
                 <type>js</type>
                 <name>leytech/colorattribute/jscolor/jscolor.min.js</name>
+            </action>
+            <action method="addItem" ifconfig="leytech_colorattribute/settings/enabled">
+                <type>js</type>
+                <script>leytech/colorattribute/jquery/jquery-3.2.1.min.js</script>
+            </action>
+            <action method="addItem" ifconfig="leytech_colorattribute/settings/enabled">
+                <type>js</type>
+                <script>leytech/colorattribute/jquery/noConflict.js</script>
+            </action>
+            <action method="addItem" ifconfig="leytech_colorattribute/settings/enabled">
+                <type>js</type>
+                <script>leytech/colorattribute/spectrum/spectrum.js</script>
+            </action>
+            <action method="addItem" ifconfig="leytech_colorattribute/settings/enabled">
+                <type>js</type>
+                <script>leytech/colorattribute/spectrum/picker.js</script>
+            </action>
+            <action method="addItem" ifconfig="leytech_colorattribute/settings/enabled">
+                <type>js_css</type>
+                <script>leytech/colorattribute/spectrum/spectrum.css</script>
             </action>
         </reference>
     </adminhtml_catalog_product_edit>

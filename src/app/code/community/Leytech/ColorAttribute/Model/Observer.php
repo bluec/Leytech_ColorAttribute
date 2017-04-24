@@ -16,6 +16,11 @@ class Leytech_ColorAttribute_Model_Observer
      */
     public function addColorAttributeType(Varien_Event_Observer $observer)
     {
+        // Do nothing if extension is not enabled
+        if (!Mage::helper('leytech_colorattribute')->isEnabled()) {
+            return $this;
+        }
+
         $response = $observer->getEvent()->getResponse();
 
         $types = $response->getTypes();
@@ -54,6 +59,11 @@ class Leytech_ColorAttribute_Model_Observer
      */
     public function assignBackendModelToAttribute(Varien_Event_Observer $observer)
     {
+        // Do nothing if extension is not enabled
+        if (!Mage::helper('leytech_colorattribute')->isEnabled()) {
+            return $this;
+        }
+
         $backendModel = 'leytech_colorattribute/attribute_backend_color';
 
         /** @var $object Mage_Eav_Model_Entity_Attribute_Abstract */
@@ -75,6 +85,11 @@ class Leytech_ColorAttribute_Model_Observer
      */
     public function updateElementTypes(Varien_Event_Observer $observer)
     {
+        // Do nothing if extension is not enabled
+        if (!Mage::helper('leytech_colorattribute')->isEnabled()) {
+            return $this;
+        }
+
         $response = $observer->getEvent()->getResponse();
 
         $types = $response->getTypes();
