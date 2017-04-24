@@ -17,7 +17,7 @@ class Leytech_ColorAttribute_Block_Element_Color extends Varien_Data_Form_Elemen
 
     public function getHtml()
     {
-        $this->addClass('jscolor');
+        $this->addClass('jscolor {required:false}');
         return parent::getHtml();
     }
 
