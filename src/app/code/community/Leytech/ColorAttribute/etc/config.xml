@@ -82,6 +82,7 @@
             <settings>
                 <enabled>0</enabled>
                 <color_picker>jscolor</color_picker>
+                <include_jquery>1</include_jquery>
             </settings>
         </leytech_colorattribute>
     </default>

@@ -17,6 +17,7 @@ class Leytech_ColorAttribute_Model_System_Config_Source_Colorpicker
     {
         $return = [
             'jscolor' => 'JSColor',
+            'color-picker' => 'Color Picker',
             'spectrum' => 'Spectrum',
             'html5' => 'HTML5',
         ];

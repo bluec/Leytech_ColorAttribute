@@ -10,6 +10,7 @@ class Leytech_ColorAttribute_Helper_Data extends Mage_Core_Helper_Abstract
 {
     const XML_PATH_ENABLED = 'leytech_colorattribute/settings/enabled';
     const XML_PATH_COLOR_PICKER = 'leytech_colorattribute/settings/color_picker';
+    const XML_PATH_INCLUDE_JQUERY = 'leytech_colorattribute/settings/include_jquery';
 
     /**
      * Get whether the extension is enabled
@@ -29,4 +30,21 @@ class Leytech_ColorAttribute_Helper_Data extends Mage_Core_Helper_Abstract
         return Mage::getStoreConfig(self::XML_PATH_COLOR_PICKER);
     }
 
+    /**
+     * Get whether to include jQuery
+     *
+     * @return mixed
+     */
+    public function getIncludeJquery() {
+        return Mage::getStoreConfig(self::XML_PATH_INCLUDE_JQUERY);
+    }
+
+    /**
+     * Get the admin template to use
+     *
+     * @return mixed
+     */
+    public function getAdminTemplate() {
+        return 'leytech/picker.phtml';
+    }
 }
