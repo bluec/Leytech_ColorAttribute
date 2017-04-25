@@ -11,8 +11,6 @@ class Leytech_ColorAttribute_Helper_Data extends Mage_Core_Helper_Abstract
     const XML_PATH_ENABLED = 'leytech_colorattribute/settings/enabled';
     const XML_PATH_COLOR_PICKER = 'leytech_colorattribute/settings/color_picker';
     const XML_PATH_INCLUDE_JQUERY = 'leytech_colorattribute/settings/include_jquery';
-    const XML_PATH_TOVIC_JS = 'leytech_colorattribute/settings/tovic_js';
-    const XML_PATH_SPECTRUM_JS = 'leytech_colorattribute/settings/spectrum_js';
 
     /**
      * Get whether the extension is enabled
@@ -42,21 +40,11 @@ class Leytech_ColorAttribute_Helper_Data extends Mage_Core_Helper_Abstract
     }
 
     /**
-     * Get tovic JS
+     * Get the admin template to use
      *
      * @return mixed
      */
-    public function getTovicJs() {
-        return Mage::getStoreConfig(self::XML_PATH_TOVIC_JS);
+    public function getAdminTemplate() {
+        return 'leytech/picker.phtml';
     }
-
-    /**
-     * Get spectrum JS
-     *
-     * @return mixed
-     */
-    public function getSpectrumJs() {
-        return Mage::getStoreConfig(self::XML_PATH_SPECTRUM_JS);
-    }
-
 }

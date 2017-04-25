@@ -17,7 +17,7 @@ class Leytech_ColorAttribute_Model_System_Config_Source_Colorpicker
     {
         $return = [
             'jscolor' => 'JSColor',
-            'tovic' => 'Tovic Color Picker',
+            'color-picker' => 'Color Picker',
             'spectrum' => 'Spectrum',
             'html5' => 'HTML5',
         ];
