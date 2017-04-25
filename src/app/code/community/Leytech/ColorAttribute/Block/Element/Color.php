@@ -17,7 +17,7 @@ class Leytech_ColorAttribute_Block_Element_Color extends Varien_Data_Form_Elemen
             case 'jscolor':
                 $this->setType('text');
                 break;
-            case 'color-picker':
+            case 'tovic':
                 $this->setType('text');
                 break;
             case 'spectrum':
@@ -40,11 +40,11 @@ class Leytech_ColorAttribute_Block_Element_Color extends Varien_Data_Form_Elemen
             case 'jscolor':
                 $this->addClass('jscolor {required:false,hash:true}');
                 break;
-            case 'color-picker':
-                $this->addClass('color-attribute');
+            case 'tovic':
+                $this->addClass('tovic');
                 break;
             case 'spectrum':
-                $this->addClass('color-attribute');
+                $this->addClass('spectrum');
                 break;
             case 'html5':
                 break;
