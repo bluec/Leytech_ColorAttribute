@@ -7,19 +7,11 @@ if (!$this->helper('leytech_colorattribute')->isEnabled()) {
 <?php $colorPicker = $this->helper('leytech_colorattribute')->getColorPicker(); ?>
 
 <?php if ($colorPicker == 'spectrum') : ?>
-    <?php if ($this->helper('leytech_colorattribute')->getSpectrumJs() == '') : ?>
     <script type="text/javascript">
         jQuery( document ).ready(function( $ ) {
             $("input.spectrum").spectrum({
-                showAlpha: true,
-                allowEmpty: true,
-                preferredFormat: "rgb",
-                showInitial: true,
-                showInput: true
+                <?php echo $this->helper('leytech_colorattribute')->getSpectrumOptions(); ?>
             });
         });
     </script>
-    <?php else : ?>
-        <?php echo $this->helper('leytech_colorattribute')->getSpectrumJs(); ?>
-    <?php endif;?>
 <?php endif; ?>

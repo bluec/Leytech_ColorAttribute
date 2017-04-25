@@ -94,7 +94,7 @@
                 <enabled>1</enabled>
                 <color_picker>jscolor</color_picker>
                 <include_jquery>1</include_jquery>
-                <spectrum_js></spectrum_js>
+                <spectrum_options></spectrum_options>
             </settings>
             <layouts>
                 <is_using_jscolor>1</is_using_jscolor>
