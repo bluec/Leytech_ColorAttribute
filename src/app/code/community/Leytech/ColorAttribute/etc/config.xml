@@ -11,7 +11,7 @@
 <config>
     <modules>
         <Leytech_ColorAttribute>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </Leytech_ColorAttribute>
     </modules>
     <global>
