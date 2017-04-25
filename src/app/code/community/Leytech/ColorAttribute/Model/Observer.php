@@ -112,7 +112,6 @@ class Leytech_ColorAttribute_Model_Observer
 
         // Set all the values to 0
         $config->saveConfig('leytech_colorattribute/layouts/is_using_jscolor', '0', $scope);
-        $config->saveConfig('leytech_colorattribute/layouts/is_using_tovic', '0', $scope);
         $config->saveConfig('leytech_colorattribute/layouts/is_using_spectrum', '0', $scope);
         $config->saveConfig('leytech_colorattribute/layouts/is_using_html5', '0', $scope);
         $config->saveConfig('leytech_colorattribute/layouts/is_using_jquery', '0', $scope);
@@ -125,8 +124,6 @@ class Leytech_ColorAttribute_Model_Observer
         // Color picker
         if ($colorPicker == 'jscolor') {
             $config->saveConfig('leytech_colorattribute/layouts/is_using_jscolor', '1', $scope);
-        } elseif ($colorPicker == 'tovic') {
-            $config->saveConfig('leytech_colorattribute/layouts/is_using_tovic', '1', $scope);
         } elseif ($colorPicker == 'spectrum') {
             $config->saveConfig('leytech_colorattribute/layouts/is_using_spectrum', '1', $scope);
             if ($includeJquery) {

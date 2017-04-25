@@ -94,7 +94,6 @@
                 <enabled>1</enabled>
                 <color_picker>jscolor</color_picker>
                 <include_jquery>1</include_jquery>
-                <tovic_js></tovic_js>
                 <spectrum_js></spectrum_js>
             </settings>
         </leytech_colorattribute>

@@ -16,15 +16,6 @@
                 <type>js</type>
                 <script>leytech/colorattribute/jscolor/jscolor.min.js</script>
             </action>
-            <!-- tovic -->
-            <action method="addItem" ifconfig="leytech_colorattribute/layouts/is_using_tovic">
-                <type>js</type>
-                <script>leytech/colorattribute/tovic/color-picker.min.js</script>
-            </action>
-            <action method="addItem" ifconfig="leytech_colorattribute/layouts/is_using_tovic">
-                <type>js_css</type>
-                <script>leytech/colorattribute/tovic/color-picker.min.css</script>
-            </action>
             <!-- jquery -->
             <action method="addItem" ifconfig="leytech_colorattribute/layouts/is_using_jquery">
                 <type>js</type>

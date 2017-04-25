@@ -33,7 +33,6 @@
                         <p>This extension allows you to create color picker product attributes by adding a new input type to the attribute creation form.</p>
                         <p>The following color picker implementations are supported:</p>
                             <p><strong>JSColor</strong> - no dependencies, no support for transparency, uses HEX values.</p>
-                            <p><strong>Tovic Color Picker</strong> - no dependencies, no support for transparency, uses HEX values.</p>
                             <p><strong>Spectrum</strong> - requires jQuery, supports transparency, uses HEX values or RGBA where transparency required.</p>
                             <p><strong>HTML5</strong> - native HTML5 color input type, no support for transparency, uses HEX values.</p>
                         ]]>
@@ -84,19 +83,6 @@
                                 <enabled>1</enabled>
                             </depends>
                         </include_jquery>
-                        <tovic_js translate="label">
-                            <label>Javascript on page</label>
-                            <comment>Leave blank to use default</comment>
-                            <frontend_type>textarea</frontend_type>
-                            <sort_order>40</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                            <depends>
-                                <color_picker>tovic</color_picker>
-                                <enabled>1</enabled>
-                            </depends>
-                        </tovic_js>
                         <spectrum_js translate="label">
                             <label>Javascript on page</label>
                             <comment>Leave blank to use default</comment>
