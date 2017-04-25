@@ -7,12 +7,16 @@ if (!$this->helper('leytech_colorattribute')->isEnabled()) {
 <?php $colorPicker = $this->helper('leytech_colorattribute')->getColorPicker(); ?>
 
 <?php if ($colorPicker == 'tovic') : ?>
+    <?php if ($this->helper('leytech_colorattribute')->getTovicJs() == '') : ?>
     <script type="text/javascript">
         var picker = new CP(document.querySelector('input.tovic'));
         picker.on("change", function(color) {
             this.target.value = '#' + color;
         });
     </script>
+    <?php else : ?>
+        <?php echo $this->helper('leytech_colorattribute')->getTovicJs(); ?>
+    <?php endif;?>
 <?php endif; ?>
 
 <?php if ($colorPicker == 'spectrum') : ?>
