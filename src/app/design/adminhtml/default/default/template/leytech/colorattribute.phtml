@@ -1,0 +1,17 @@
+<?php
+if (!$this->helper('leytech_colorattribute')->isEnabled()) {
+    return;
+}
+?>
+
+<?php $colorPicker = $this->helper('leytech_colorattribute')->getColorPicker(); ?>
+
+<?php if ($colorPicker == 'spectrum') : ?>
+    <script type="text/javascript">
+        jQuery( document ).ready(function( $ ) {
+            $("input.spectrum").spectrum({
+                <?php echo $this->helper('leytech_colorattribute')->getSpectrumOptions(); ?>
+            });
+        });
+    </script>
+<?php endif; ?>

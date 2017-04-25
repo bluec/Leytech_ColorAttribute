@@ -16,6 +16,11 @@ class Leytech_ColorAttribute_Model_Observer
      */
     public function addColorAttributeType(Varien_Event_Observer $observer)
     {
+        // Do nothing if extension is not enabled
+        if (!Mage::helper('leytech_colorattribute')->isEnabled()) {
+            return $this;
+        }
+
         $response = $observer->getEvent()->getResponse();
 
         $types = $response->getTypes();
@@ -54,6 +59,11 @@ class Leytech_ColorAttribute_Model_Observer
      */
     public function assignBackendModelToAttribute(Varien_Event_Observer $observer)
     {
+        // Do nothing if extension is not enabled
+        if (!Mage::helper('leytech_colorattribute')->isEnabled()) {
+            return $this;
+        }
+
         $backendModel = 'leytech_colorattribute/attribute_backend_color';
 
         /** @var $object Mage_Eav_Model_Entity_Attribute_Abstract */
@@ -75,6 +85,11 @@ class Leytech_ColorAttribute_Model_Observer
      */
     public function updateElementTypes(Varien_Event_Observer $observer)
     {
+        // Do nothing if extension is not enabled
+        if (!Mage::helper('leytech_colorattribute')->isEnabled()) {
+            return $this;
+        }
+
         $response = $observer->getEvent()->getResponse();
 
         $types = $response->getTypes();
@@ -83,6 +98,51 @@ class Leytech_ColorAttribute_Model_Observer
         $response->setTypes($types);
 
         return $this;
+    }
+
+    public function assignLayoutConfigs(Varien_Event_Observer $observer)
+    {
+        $postData = Mage::app()->getRequest()->getPost();
+        $colorPicker = $postData['groups']['settings']['fields']['color_picker']['value'];
+        $enabled = $postData['groups']['settings']['fields']['enabled']['value'];
+        $includeJquery = $postData['groups']['settings']['fields']['include_jquery']['value'];
+
+        $config = Mage::getModel('core/config');
+        $scope = $this->_findScope($observer->getEvent()->getData());
+
+        // Set all the values to 0
+        $config->saveConfig('leytech_colorattribute/layouts/is_using_jscolor', '0', $scope);
+        $config->saveConfig('leytech_colorattribute/layouts/is_using_spectrum', '0', $scope);
+        $config->saveConfig('leytech_colorattribute/layouts/is_using_html5', '0', $scope);
+        $config->saveConfig('leytech_colorattribute/layouts/is_using_jquery', '0', $scope);
+
+        // Leave all values as zero if extension is disabled
+        if(!$enabled) {
+            return;
+        }
+
+        // Color picker
+        if ($colorPicker == 'jscolor') {
+            $config->saveConfig('leytech_colorattribute/layouts/is_using_jscolor', '1', $scope);
+        } elseif ($colorPicker == 'spectrum') {
+            $config->saveConfig('leytech_colorattribute/layouts/is_using_spectrum', '1', $scope);
+            if ($includeJquery) {
+                $config->saveConfig('leytech_colorattribute/layouts/is_using_jquery', '1', $scope);
+            }
+        } elseif ($colorPicker == 'html5') {
+            $config->saveConfig('leytech_colorattribute/layouts/is_using_html5', '1', $scope);
+        }
+    }
+
+    protected function _findScope($data)
+    {
+        if (is_null($data['store']) && $data['website']) {
+            return $data['website'];
+        } elseif ($data['store']) {
+            return $data['store'];
+        }
+
+        return 'default';
     }
 
 }

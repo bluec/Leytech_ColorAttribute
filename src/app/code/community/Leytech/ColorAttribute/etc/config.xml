@@ -11,7 +11,7 @@
 <config>
     <modules>
         <Leytech_ColorAttribute>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </Leytech_ColorAttribute>
     </modules>
     <global>
@@ -40,6 +40,17 @@
                     </leytech_colorattribute>
                 </observers>
             </catalog_entity_attribute_save_before>
+        </events>
+        <events>
+            <admin_system_config_changed_section_leytech_colorattribute>
+                <observers>
+                    <leytech_colorattribute>
+                        <type>model</type>
+                        <class>leytech_colorattribute/observer</class>
+                        <method>assignLayoutConfigs</method>
+                    </leytech_colorattribute>
+                </observers>
+            </admin_system_config_changed_section_leytech_colorattribute>
         </events>
     </global>
     <adminhtml>
@@ -78,5 +89,19 @@
                 </input_types>
             </validator_data>
         </general>
+        <leytech_colorattribute>
+            <settings>
+                <enabled>1</enabled>
+                <color_picker>jscolor</color_picker>
+                <include_jquery>1</include_jquery>
+                <spectrum_options></spectrum_options>
+            </settings>
+            <layouts>
+                <is_using_jscolor>1</is_using_jscolor>
+                <is_using_spectrum>0</is_using_spectrum>
+                <is_using_html5>0</is_using_html5>
+                <is_using_jquery>0</is_using_jquery>
+            </layouts>
+        </leytech_colorattribute>
     </default>
 </config>

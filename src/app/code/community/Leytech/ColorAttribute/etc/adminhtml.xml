@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Leytech ColorAttribute Extension
+ *
+ * @category    Leytech
+ * @package     Leytech_ColorAttribute
+ * @author      Chris Nolan <chris@leytech.co.uk>
+ */
+-->
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <leytech_colorattribute translate="title" module="leytech_colorattribute">
+                                        <title>Leytech: Color Picker Attribute</title>
+                                        <sort_order>1006000</sort_order>
+                                    </leytech_colorattribute>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

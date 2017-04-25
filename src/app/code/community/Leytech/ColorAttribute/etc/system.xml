@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Leytech ColorAttribute Extension
+ *
+ * @category    Leytech
+ * @package     Leytech_ColorAttribute
+ * @author      Chris Nolan <chris@leytech.co.uk>
+ */
+-->
+<config>
+    <sections>
+        <leytech_colorattribute translate="label" module="leytech_ordershare">
+            <label>Leytech: Color Picker Attribute</label>
+            <tab>catalog</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>200</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <about translate="label">
+                    <label>About</label>
+                    <sort_order>10</sort_order>
+                    <frontend_type>text</frontend_type>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <expanded>1</expanded>
+                    <comment>
+                        <![CDATA[
+                        <h3>Leytech Color Picker Attribute Extension</h3>
+                        <p>This extension allows you to create color picker product attributes by adding a new input type to the attribute creation form.</p>
+                        <p>The following color picker implementations are supported:</p>
+                            <p><strong>JSColor</strong> - no dependencies, no support for transparency, uses HEX values.</p>
+                            <p><strong>Spectrum</strong> - requires jQuery, supports transparency, uses HEX values or RGBA where transparency required.</p>
+                            <p><strong>HTML5</strong> - native HTML5 color input type, no support for transparency, uses HEX values.</p>
+                        ]]>
+                    </comment>
+                </about>
+                <settings translate="label">
+                    <label>Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <expanded>1</expanded>
+                    <fields>
+                        <enabled translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <color_picker translate="label">
+                            <label>Color picker</label>
+                            <comment>See About section above for brief explanation of differences</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>leytech_colorattribute/system_config_source_colorpicker</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </color_picker>
+                        <include_jquery translate="label">
+                            <label>Include jQuery</label>
+                            <comment>Required for Spectrum but can set this to no if jQuery is already loaded by another extension</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <color_picker>spectrum</color_picker>
+                                <enabled>1</enabled>
+                            </depends>
+                        </include_jquery>
+                        <spectrum_options translate="label">
+                            <label>Options for Spectrum</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <color_picker>spectrum</color_picker>
+                                <enabled>1</enabled>
+                            </depends>
+                        </spectrum_options>
+                    </fields>
+                </settings>
+            </groups>
+        </leytech_colorattribute>
+    </sections>
+</config>
