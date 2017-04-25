@@ -96,6 +96,12 @@
                 <include_jquery>1</include_jquery>
                 <spectrum_js></spectrum_js>
             </settings>
+            <layouts>
+                <is_using_jscolor>1</is_using_jscolor>
+                <is_using_spectrum>0</is_using_spectrum>
+                <is_using_html5>0</is_using_html5>
+                <is_using_jquery>0</is_using_jquery>
+            </layouts>
         </leytech_colorattribute>
     </default>
 </config>
