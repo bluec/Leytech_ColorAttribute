@@ -1,0 +1,32 @@
+<?php
+if (!$this->helper('leytech_colorattribute')->isEnabled()) {
+    return;
+}
+?>
+
+<?php $colorPicker = $this->helper('leytech_colorattribute')->getColorPicker(); ?>
+
+<?php if ($colorPicker == 'tovic') : ?>
+    <script type="text/javascript">
+        var picker = new CP(document.querySelector('input.tovic'));
+        picker.on("change", function(color) {
+            this.target.value = '#' + color;
+        });
+    </script>
+<?php endif; ?>
+
+<?php if ($colorPicker == 'spectrum') : ?>
+    <?php if ($this->helper('leytech_colorattribute')->getSpectrumJs() == '') : ?>
+    <script type="text/javascript">
+        jQuery( document ).ready(function( $ ) {
+            $("input.spectrum").spectrum({
+                showAlpha: true,
+                preferredFormat: "hex",
+                showInput: true
+            });
+        });
+    </script>
+    <?php else : ?>
+        <?php echo $this->helper('leytech_colorattribute')->getSpectrumJs(); ?>
+    <?php endif;?>
+<?php endif; ?>

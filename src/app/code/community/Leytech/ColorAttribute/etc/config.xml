@@ -41,6 +41,17 @@
                 </observers>
             </catalog_entity_attribute_save_before>
         </events>
+        <events>
+            <admin_system_config_changed_section_leytech_colorattribute>
+                <observers>
+                    <leytech_colorattribute>
+                        <type>model</type>
+                        <class>leytech_colorattribute/observer</class>
+                        <method>assignLayoutConfigs</method>
+                    </leytech_colorattribute>
+                </observers>
+            </admin_system_config_changed_section_leytech_colorattribute>
+        </events>
     </global>
     <adminhtml>
         <events>
@@ -80,9 +91,11 @@
         </general>
         <leytech_colorattribute>
             <settings>
-                <enabled>0</enabled>
+                <enabled>1</enabled>
                 <color_picker>jscolor</color_picker>
                 <include_jquery>1</include_jquery>
+                <tovic_js></tovic_js>
+                <spectrum_js></spectrum_js>
             </settings>
         </leytech_colorattribute>
     </default>
