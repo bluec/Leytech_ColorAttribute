@@ -34,7 +34,7 @@ Using the color picker when editing a product:
 
 ### To do
 
-1. Add composer support.
+1. Nothing... please add issues for any feature requests.
 
 ### Support
 
