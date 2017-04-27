@@ -1,10 +1,9 @@
 <?php
 /**
- * ColorAttribute color picker system config source
- *
- * @category Leytech
- * @package  Leytech_ColorAttribute
- * @author   Chris Nolan <chris@leytech.co.uk>
+ * @package    Leytech_ColorAttribute
+ * @author     Chris Nolan (chris@leytech.co.uk)
+ * @copyright  Copyright (c) 2017 Leytech
+ * @license    https://opensource.org/licenses/MIT  The MIT License  (MIT)
  */
 class Leytech_ColorAttribute_Model_System_Config_Source_Colorpicker
 {

@@ -1,11 +1,10 @@
 <?xml version="1.0"?>
 <!--
 /**
- * Leytech ColorAttribute Extension
- *
- * @category    Leytech
- * @package     Leytech_ColorAttribute
- * @author      Chris Nolan <chris@leytech.co.uk>
+ * @package    Leytech_ColorAttribute
+ * @author     Chris Nolan (chris@leytech.co.uk)
+ * @copyright  Copyright (c) 2017 Leytech
+ * @license    https://opensource.org/licenses/MIT  The MIT License  (MIT)
  */
 -->
 <config>
