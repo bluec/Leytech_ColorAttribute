@@ -35,7 +35,7 @@
             </action>
         </reference>
         <reference name="js">
-            <block type="adminhtml/catalog_product_edit_js" name="leytech_colorpicker" as="leytech_colorpicker" template="leytech/colorattribute.phtml" />
+            <block type="adminhtml/catalog_product_edit_js" name="leytech_colorpicker" as="leytech_colorpicker" template="leytech/colorattribute/pickerjs.phtml" />
         </reference>
     </adminhtml_catalog_product_edit>
 </layout>

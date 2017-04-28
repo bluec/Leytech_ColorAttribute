@@ -1,5 +1,5 @@
 src/app/code/community/Leytech/ColorAttribute                                   app/code/community/Leytech/ColorAttribute
 src/app/design/adminhtml/default/default/layout/leytech/colorattribute.xml      app/design/adminhtml/default/default/layout/leytech/colorattribute.xml
-src/app/design/adminhtml/default/default/template/leytech/colorattribute.phtml  app/design/adminhtml/default/default/template/leytech/colorattribute.phtml
+src/app/design/adminhtml/default/default/template/leytech/colorattribute        app/design/adminhtml/default/default/template/leytech/colorattribute
 src/app/etc/modules/Leytech_ColorAttribute.xml                                  app/etc/modules/Leytech_ColorAttribute.xml
 src/js/leytech/colorattribute                                                   js/leytech/colorattribute
