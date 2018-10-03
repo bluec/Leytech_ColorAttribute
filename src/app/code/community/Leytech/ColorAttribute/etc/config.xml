@@ -10,7 +10,7 @@
 <config>
     <modules>
         <Leytech_ColorAttribute>
-            <version>1.0.3</version>
+            <version>1.0.4</version>
         </Leytech_ColorAttribute>
     </modules>
     <global>
@@ -71,6 +71,14 @@
                     </leytech_colorattribute>
                 </observers>
             </adminhtml_catalog_product_edit_element_types>
+            <adminhtml_catalog_product_form_prepare_excluded_field_list>
+                <observers>
+                    <leytech_colorattribute>
+                        <class>leytech_colorattribute/observer</class>
+                        <method>updateExcludedFieldList</method>
+                    </leytech_colorattribute>
+                </observers>
+            </adminhtml_catalog_product_form_prepare_excluded_field_list>
         </events>
         <layout>
             <updates>
