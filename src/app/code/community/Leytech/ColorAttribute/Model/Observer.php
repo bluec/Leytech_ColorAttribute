@@ -77,6 +77,25 @@ class Leytech_ColorAttribute_Model_Observer
     }
 
     /**
+     * Exclude 'leytech_color' attributes from standard form generation
+     *
+     * @param   Varien_Event_Observer $observer
+     * @return  Leytech_ColorAttribute_Model_Observer
+     */
+    public function updateExcludedFieldList(Varien_Event_Observer $observer)
+    {
+        $block = $observer->getEvent()->getObject();
+        $list = $block->getFormExcludedFieldList();
+
+        $attributes = Mage::getModel('eav/entity_attribute')->getAttributeCodesByFrontendType('leytech_color');
+        $list = array_merge($list, array_values($attributes));
+
+        $block->setFormExcludedFieldList($list);
+
+        return $this;
+    }
+
+    /**
      * Assign frontend model to color input type
      *
      * @param  Varien_Event_Observer $observer
